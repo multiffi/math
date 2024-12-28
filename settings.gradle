@@ -1,0 +1,5 @@
+rootProject.name = 'math'
+
+include ':core'
+include ':jdk'
+include ':android'
