@@ -14,7 +14,7 @@ public abstract class RandomProvider {
                 try {
                     IMPLEMENTATION = (RandomProvider) Class
                             .forName(Objects.requireNonNull(System.getProperty("multiffi.random.provider")))
-                            .getDeclaredConstructor()
+                            .getConstructor()
                             .newInstance();
                 } catch (Throwable e) {
                     try {

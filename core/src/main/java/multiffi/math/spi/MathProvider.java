@@ -14,7 +14,7 @@ public abstract class MathProvider {
                 try {
                     IMPLEMENTATION = (MathProvider) Class
                             .forName(Objects.requireNonNull(System.getProperty("multiffi.math.provider")))
-                            .getDeclaredConstructor()
+                            .getConstructor()
                             .newInstance();
                 } catch (Throwable e) {
                     try {
